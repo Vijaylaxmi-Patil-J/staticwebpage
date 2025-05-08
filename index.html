@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Streaming Platform</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+
+        .video-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        footer {
+            background-color: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Streamify</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">My Account</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Streamify</h1>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <img src="assets\wildlife.jpg" alt="Thumbnail" class="video-thumbnail">
+                    <video controls>
+                        <source src="https://d2qn4msoy3aizq.cloudfront.net/wildlife.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Costa Rica: A Tropical Paradise 🌿🏝️ </h3>
+                    <p>Explore Costa Rica’s stunning beaches, lush rainforests, and vibrant wildlife.
+                         From waterfalls to volcanoes, this adventure has it all! 🌎✨ </p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-container">
+                    <img src="assets/landscape.jpg" alt="Thumbnail" class="video-thumbnail">
+                    <video controls>
+                        <source src="https://d2qn4msoy3aizq.cloudfront.net/landscape.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Full Moon Magic 🌕✨</h3>
+                    <p>Experience the beauty of the full moon as it lights up the night sky.
+                        A mesmerizing view of nature’s brilliance! 🌌🌙 </p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-container">
+                    <img src="assets/animation.jpg" alt="Thumbnail" class="video-thumbnail">
+                    <video controls>
+                        <source src="https://d2qn4msoy3aizq.cloudfront.net/animation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Margo & Froggy: Hide and Seek! 🎭🐸</h3>
+
+                    <p> Margo searches while Froggy finds the best hiding spots. Who will win? Watch the fun unfold! 🌿🔍</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Streamify. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
